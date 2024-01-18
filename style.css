@@ -132,6 +132,16 @@ table {
 :root {
   --main-font: "Roboto", sans-serif;
 }
+@font-face {
+  font-family: Archangelsk;
+  src: url(./fonts/ofont.ru_Archangelsk.ttf);
+}
+
+body{
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+}
 
 .header {
   background-image: url(./imges/header-IMG.jpg);
@@ -139,7 +149,49 @@ table {
   background-size: cover;
   background-position: center;
 }
-
+.container{
+  max-width: 1352px;
+  padding-inline: 36px;
+  margin: 0 auto;
+}
 .wrapper {
   min-height: 1000px;
+}
+.menu-line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-links{
+  display: flex;
+  gap: 0 40px;
+}
+.header-bottom__block{
+  width: 624px;
+  height: 370px;
+  background: linear-gradient(315deg,  transparent 5%, #F8F200 5%, #F8F200 95%, transparent 95%);
+  padding-inline: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.header-bottom__title{
+  font-family: Archangelsk;
+  font-size: 62px;
+  max-width: 484px;
+}
+.header-bottom__button{
+  margin-block: 25px 70px;
+}
+.header-bottom__button{
+  color: #F8F200;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  background-color: #000;
+  padding: 50px 20px;
+  width: 272px;
+  height: 78px;
 }
