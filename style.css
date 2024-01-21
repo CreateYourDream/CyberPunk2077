@@ -129,18 +129,17 @@ table {
   box-sizing: border-box;
 }
 
-:root {
-  --main-font: "Roboto", sans-serif;
-}
 @font-face {
   font-family: Archangelsk;
   src: url(./fonts/ofont.ru_Archangelsk.ttf);
 }
 
-body{
+body {
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   line-height: normal;
   font-weight: 400;
+  font-size: 18px;
 }
 
 .header {
@@ -148,50 +147,229 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  animation: HeaderIMG 20s linear infinite;
 }
-.container{
+/* steps(100, end) */
+@keyframes HeaderIMG {
+  from {
+    background-image: url(./imges/header-IMG.jpg);
+  }
+  33% {
+    background-image: url(./imges/header-IMG-2.jpg);
+  }
+  66% {
+    background-image: url(./imges/header-IMG-3.jpg);
+  }
+  to {
+    background-image: url(./imges/header-IMG.jpg);
+  }
+}
+.container {
   max-width: 1352px;
   padding-inline: 36px;
   margin: 0 auto;
 }
+/* /////HEADER///////// */
 .wrapper {
   min-height: 1000px;
+  display: flex;
+  flex-direction: column;
 }
-.menu-line{
+.menu-line {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.social-links{
+.social-links {
   display: flex;
   gap: 0 40px;
 }
-.header-bottom__block{
-  width: 624px;
-  height: 370px;
-  background: linear-gradient(315deg,  transparent 5%, #F8F200 5%, #F8F200 95%, transparent 95%);
-  padding-inline: 70px;
+
+.header-bottom {
+  margin-top: auto;
+  margin-left: auto;
+}
+.header-bottom__block {
+  max-width: 624px;
+  background: linear-gradient(
+    315deg,
+    transparent 5%,
+    #f8f200 5%,
+    #f8f200 95%,
+    transparent 95%
+  );
+  padding: 70px;
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
-.header-bottom__title{
+.title {
   font-family: Archangelsk;
   font-size: 62px;
-  max-width: 484px;
 }
-.header-bottom__button{
-  margin-block: 25px 70px;
-}
-.header-bottom__button{
-  color: #F8F200;
-  text-align: center;
-  font-family: Roboto;
+
+.header-bottom__button {
+  margin-top: 25px;
+  color: #f8f200;
   font-size: 24px;
   font-weight: 700;
-  line-height: 40px;
   background-color: #000;
   padding: 50px 20px;
   width: 272px;
   height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* /////cyberPunkIs///////// */
+.cyberPunkIs__wrapper {
+  padding-bottom: 100px;
+}
+.cyberPunkIs__title {
+  margin-top: 31px;
+}
+
+.cyberPunkIs__text {
+  color: #777;
+  line-height: 34px;
+  max-width: 952px;
+  font-size: 18px;
+  margin-block: 25px 70px;
+}
+.cyberPunkIs__text::before {
+  content: "Cyberpunk 2077";
+  color: #52bedc;
+}
+.cyberPunkIs__images {
+  display: flex;
+}
+.cyberPunkIs__images-left {
+  margin-right: 32px;
+  display: inline-flex;
+  gap: 32px;
+  flex-direction: column;
+}
+.cyberPunkIs__images-item {
+  width: 460px;
+}
+
+.cyberPunkIs__images-item--img {
+  max-width: 788px;
+  max-height: 424px;
+}
+
+/* /////full-immersion///////// */
+
+.full-immersion__top-line {
+  background: url(./imges/full-immersion\ top.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70px;
+}
+
+.full-immersion {
+  background-color: #f8f200;
+}
+
+.full-immersion__wrapper {
+  display: flex;
+  gap: 0 32px;
+  padding-block: 70px;
+}
+
+.images-block {
+  max-width: 624px;
+}
+
+.images-block__display {
+  max-height: 430px;
+  margin-bottom: 26px;
+}
+.images-block__img-group {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.images-block__img-group-logo {
+  width: 320px;
+  height: 80px;
+}
+
+.full-immersion__options {
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+}
+.full-immersion__options-item {
+  display: flex;
+  gap: 0 10px;
+}
+
+.full-immersion__options-text {
+  line-height: 34px;
+}
+
+.full-immersion__option-link {
+  margin-top: 15px;
+  width: 194px;
+  height: 60px;
+  font-size: 18px;
+}
+
+/* //////buygame///////// */
+.buyGame__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 717px;
+  grid-template-areas: "image contant";
+}
+.buyGame__img {
+  grid-area: image;
+  background: url(./imges/buy-game.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+}
+
+.buyGame__block {
+  grid-area: contant;
+  padding: 36px;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+}
+.buyGame__title {
+  max-width: 624px;
+  margin-bottom: 25px;
+}
+.buyGame__subTitle {
+  color: #52bedc;
+  font-weight: 700;
+  font-size: 24px;
+}
+.buyGame__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+}
+.buyGame__item {
+  display: flex;
+  align-items: center;
+}
+
+/* .test{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px ;
+}
+.test1{
+  background-color: violet;
+  border: 3px solid #000;
+}
+.test2{
+  background-color: rgb(32, 159, 176);
+  border: 3px solid #000;
+} */
