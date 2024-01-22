@@ -128,7 +128,10 @@ table {
 *::after {
   box-sizing: border-box;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 @font-face {
   font-family: Archangelsk;
   src: url(./fonts/ofont.ru_Archangelsk.ttf);
@@ -354,22 +357,37 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px 0;
+  margin-bottom: 70px;
 }
 .buyGame__item {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+.choosePlatform__text {
+  margin-bottom: 25px;
+}
+.choosePlatform__item {
+  display: grid;
+  grid-template-columns: 62px 178px;
+  grid-template-rows: 36px 52px;
+  justify-content: start;
+  align-items: center;
+  gap: 48px 80px;
 }
 
-/* .test{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px ;
+/* ////////////footer/////////////// */
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 13px;
 }
-.test1{
-  background-color: violet;
-  border: 3px solid #000;
+.footer__item {
+  display: flex;
+  column-gap: 32px;
 }
-.test2{
-  background-color: rgb(32, 159, 176);
-  border: 3px solid #000;
-} */
+.footer__top-images {
+  /* flex-direction: column; */
+}
