@@ -1,3 +1,40 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(.fonts/Roboto-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  line-height: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Archangelsk;
+  src: url(./fonts/Archangelsk.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  font-size: 62px;
+  font-display: swap;
+}
+
 html,
 body,
 div,
@@ -132,16 +169,16 @@ a {
   text-decoration: none;
   color: inherit;
 }
-@font-face {
-  font-family: Archangelsk;
-  src: url(./fonts/ofont.ru_Archangelsk.ttf);
+:root {
+  --color-yellow: #f8f200;
+  --color-blue: #52bedc;
+
+  --font-family-main: "Roboto", sans-serif;
+  --font-family-accent: "Archangelsk", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  line-height: normal;
-  font-weight: 400;
+  font-family: var(--font-family-main);
   font-size: 18px;
 }
 
@@ -152,7 +189,7 @@ body {
   background-position: center;
   animation: HeaderIMG 20s linear infinite;
 }
-/* steps(100, end) */
+
 @keyframes HeaderIMG {
   from {
     background-image: url(./imges/header-IMG.jpg);
@@ -173,13 +210,14 @@ body {
   margin: 0 auto;
 }
 /* /////HEADER///////// */
-.wrapper {
+.header-wrapper {
   min-height: 1000px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .menu-line {
-  margin-top: 20px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,11 +227,10 @@ body {
   gap: 0 40px;
 }
 
-.header-bottom {
-  margin-top: auto;
-  margin-left: auto;
+.header-banner {
+  align-self: flex-end;
 }
-.header-bottom__block {
+.header-banner__block {
   max-width: 624px;
   background: linear-gradient(
     315deg,
@@ -261,6 +298,20 @@ body {
 .cyberPunkIs__images-item--img {
   max-width: 788px;
   max-height: 424px;
+}
+/* /////////////playAndWin///////////// */
+
+.sale {
+  background-image: url(./imges/Vector.svg);
+  background-repeat: no-repeat;
+  width: 132px;
+  height: 132px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sale__text {
+  transform: rotate(-45deg);
 }
 
 /* /////full-immersion///////// */
@@ -388,6 +439,13 @@ body {
   display: flex;
   column-gap: 32px;
 }
-.footer__top-images {
-  /* flex-direction: column; */
+.footer__bottom {
+  background-color: #000;
+}
+.footer__bottom-text {
+  text-align: center;
+  padding-block: 13px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
 }
