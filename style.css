@@ -235,8 +235,8 @@ body {
   background: linear-gradient(
     315deg,
     transparent 5%,
-    #f8f200 5%,
-    #f8f200 95%,
+   var(--color-yellow) 5%,
+   var(--color-yellow) 95%,
     transparent 95%
   );
   padding: 70px;
