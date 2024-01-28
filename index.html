@@ -19,35 +19,35 @@
           <a href="#" class="logo__link"><img class="logo__item" src="./imges/Logo.png" alt="" /></a>
         </div>
 
-        <ul class="social-links">
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">
-              <img class="social-links__image" src="./imges/youtube logo.svg" alt="" />
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__img" src="./imges/youtube logo.svg" alt="" />
             </a>
           </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">
-              <img class="social-links__image" src="./imges/vk logo.svg" alt="" />
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__img" src="./imges/vk logo.svg" alt="" />
             </a>
           </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">
-              <img class="social-links__image" src="./imges/facebook-logo.png" alt="" />
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__img" src="./imges/facebook-logo.png" alt="" />
             </a>
           </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">
-              <img class="social-links__image" src="./imges/twitter-logo.svg" alt="" />
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__img" src="./imges/twitter-logo.svg" alt="" />
             </a>
           </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">
-              <img class="social-links__image" src="./imges/twitch-logo.svg" alt="" />
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__img" src="./imges/twitch-logo.svg" alt="" />
             </a>
           </li>
-          <li class="social-links__item">
-            <a class="social-links__link" href="#">
-              <img class="social-links__image" src="./imges/instagram-logo.svg" alt="" />
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__img" src="./imges/instagram-logo.svg" alt="" />
             </a>
           </li>
         </ul>
@@ -56,35 +56,57 @@
       <div class="header-banner">
         <div class="header-banner__block">
           <h1 class="title">Доступно на всех платформах</h1>
-          <a class="header-bottom__button">Узнать больше</a>
+          <a class="header-banner__button button">Узнать больше</a>
         </div>
       </div>
     </div>
   </header>
   <main class="main">
-    <section class="cyberPunkIs">
-      <div class="cyberPunkIs__wrapper container">
-        <h2 class="cyberPunkIs__title title">Найт-Сити изменит тебя навсегда!</h2>
-        <h3 class="cyberPunkIs__text"> — приключенческая ролевая игра, действие которой происходит в мегаполисе
+    <section class="cyberPunk-description">
+      <div class="cyberPunk-description__wrapper container">
+        <h2 class="title">Найт-Сити изменит тебя навсегда!</h2>
+        <h3 class="cyberPunk-description__text"> — приключенческая ролевая игра, действие которой происходит в
+          мегаполисе
           Найт-Сити, где власть, роскошь и модификации тела ценятся выше всего. Ты играешь за V, наёмника в поисках
           устройства, позволяющего обрести бессмертие. Ты сможешь менять киберимпланты, навыки и стиль игры своего
           персонажа, исследуя открытый мир, где твои поступки влияют на ход сюжета и всё, что тебя окружает.</h3>
-        <div class="cyberPunkIs__images">
-          <div class="cyberPunkIs__images-left"> <img class="cyberPunkIs__images-item" src="./imges/cyberIs-1.png"
-              alt="">
-            <img class="cyberPunkIs__images-item" src="./imges/cyberIs-2.png" alt="">
+        <div class="cyberPunk-description-images">
+          <div class="cyberPunk-description-images__item">
+            <img class="cyberPunk-description__item-img" src="./imges/cyberIs-1.png" alt="">
+            <img class="cyberPunk-description__item-img" src="./imges/cyberIs-2.png" alt="">
           </div>
-          <img class="cyberPunkIs__images-item--img" src="./imges/cyberIs-3.png" alt="">
+          <img class="cyberPunk-description__images-item--img" src="./imges/cyberIs-3.png" alt="">
         </div>
     </section>
-    <section class="playAndWin">
-      <div class="playAndWin__wrapper container">
-        <div class="playAndWin__item">
-          <div class="sale">
-            <h2 class="sale__text">акция</h2>
+    <section class="play-Win">
+      <div class="container">
+      <div class="play-Win-wrapper">
+          <div class="play-Win-left-block">
+            <h3 class="play-Win__title title">Играй и выигрывай!</h3>
+            <div class="play-Win__description-sale">Играй в <span>Cyberpunk 2077</span> и получи возможность выиграть консоль <span>Xbox
+              Series X</span> или <span>Sony PlayStation 5!</span> Заполни форму ниже и приложи скриншот о покупке игры. Итоги розыгрыша
+              будут подведены 1 февраля. Удачи! ;&#41; </div>
+
+            <form class="play-Win-form" action="">
+              <input class="play-Win-form__input" type="text" required placeholder="Как тебя зовут?">
+              <input class="play-Win-form__input" type="email" required placeholder="Твой е-mail">
+              <div class="play-Win-form__input-file">
+                <input id="file" class="play-Win-form__input" type="file" required placeholder="Прикрепить скриншот"
+                  style="visibility:hidden;" accept="image/*">
+                <label for="file">Прикрепить скриншот</label>
+              </div>
+              <input class="play-Win-form__input-submit" type="submit">
+              <div class="confirm">
+                <input id="confirm" type="checkbox" required>
+                <label for="confirm">Согласен на обработку персональных данных</label>
+            </form>
           </div>
         </div>
-        <div class="playAndWin__item"></div>
+        <div class="play-Win-right-block">
+          <div class="xBox-item"><img class="xBox-item-img" src="./imges/xbox.png" alt=""></div>
+          <div class="ps-item"><img class="ps-item-img" src="./imges/playStaytion.png" alt=""></div>
+        </div>
+      </div>
       </div>
     </section>
     <section class="full-immersion">
@@ -177,7 +199,7 @@
       <div class="footer__top">
         <div class="footer__top-images footer__item">
           <img class="footer__logo" src="./imges/Logo.png" alt="">
-          <img class="footer__CD-PROJECT" src="./imges/CD_Projekt_logo.svg" alt="" >
+          <img class="footer__CD-PROJECT" src="./imges/CD_Projekt_logo.svg" alt="">
         </div>
         <div class="footer__item">
           <h3 class="footer__document-item">

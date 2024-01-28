@@ -172,6 +172,9 @@ a {
 :root {
   --color-yellow: #f8f200;
   --color-blue: #52bedc;
+  --color-black: #000000;
+  --color-white: #fff;
+  --color-grey: #777;
 
   --font-family-main: "Roboto", sans-serif;
   --font-family-accent: "Archangelsk", sans-serif;
@@ -181,7 +184,10 @@ body {
   font-family: var(--font-family-main);
   font-size: 18px;
 }
-
+span {
+  color: var(--color-blue);
+  font-weight: 700;
+}
 .header {
   background-image: url(./imges/header-IMG.jpg);
   background-repeat: no-repeat;
@@ -209,7 +215,7 @@ body {
   padding-inline: 36px;
   margin-inline: auto;
 }
-/* /////HEADER///////// */
+/* /////HEADER/////////// */
 .header-wrapper {
   min-height: 1000px;
   display: flex;
@@ -222,7 +228,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.social-links {
+.social {
   display: flex;
   gap: 0 40px;
 }
@@ -235,83 +241,138 @@ body {
   background: linear-gradient(
     315deg,
     transparent 5%,
-   var(--color-yellow) 5%,
-   var(--color-yellow) 95%,
+    var(--color-yellow) 5%,
+    var(--color-yellow) 95%,
     transparent 95%
   );
   padding: 70px;
   display: flex;
   flex-direction: column;
   justify-content: end;
+  row-gap: 25px;
 }
 .title {
-  font-family: Archangelsk;
+  font-family: var(--font-family-accent);
   font-size: 62px;
 }
-
-.header-bottom__button {
-  margin-top: 25px;
-  color: #f8f200;
+.button {
+  color: var(--color-yellow);
+  background-color: var(--color-black);
+  padding-inline: 50px;
+}
+.header-banner__button {
   font-size: 24px;
   font-weight: 700;
-  background-color: #000;
-  padding: 50px 20px;
+  padding-block: 20px;
   width: 272px;
   height: 78px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-/* /////cyberPunkIs///////// */
-.cyberPunkIs__wrapper {
-  padding-bottom: 100px;
-}
-.cyberPunkIs__title {
-  margin-top: 31px;
+.header-banner__button:hover {
+  cursor: pointer;
+  color: var(--color-blue);
 }
 
-.cyberPunkIs__text {
-  color: #777;
+/* /////cyberPunk-description///////// */
+.cyberPunk-description__wrapper {
+  padding-block: 50px;
+}
+
+.cyberPunk-description__text {
+  color: var(--color-grey);
   line-height: 34px;
   max-width: 952px;
   font-size: 18px;
   margin-block: 25px 70px;
 }
-.cyberPunkIs__text::before {
+.cyberPunk-description__text::before {
   content: "Cyberpunk 2077";
-  color: #52bedc;
+  color: var(--color-blue);
+  font-weight: 700;
 }
-.cyberPunkIs__images {
+.cyberPunk-description-images {
   display: flex;
+  column-gap: 32px;
 }
-.cyberPunkIs__images-left {
-  margin-right: 32px;
-  display: inline-flex;
-  gap: 32px;
+.cyberPunk-description-images__item {
+  display: flex;
+  row-gap: 32px;
   flex-direction: column;
-}
-.cyberPunkIs__images-item {
-  width: 460px;
+  max-width: 460px;
 }
 
-.cyberPunkIs__images-item--img {
+.cyberPunk-description__images-item--img {
   max-width: 788px;
   max-height: 424px;
 }
-/* /////////////playAndWin///////////// */
 
-.sale {
-  background-image: url(./imges/Vector.svg);
-  background-repeat: no-repeat;
-  width: 132px;
-  height: 132px;
+/* /////////////play-Win///////////// */
+.play-Win {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.play-Win::before {
+  content: "";
+  background-image: url(./imges/play-win-top.png);
+  display: block;
+  height: 70px;
+  width: 100vw;
+}
+.play-Win::after {
+  content: "";
+  background-image: url(./imges/play-win-bottom.png);
+  display: block;
+  height: 70px;
+  width: 100vw;
+}
+.play-Win-wrapper {
   display: flex;
+  justify-content: space-between;
+}
+.play-Win-left-block {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.play-Win__title::before {
+  content: "акция";
+  color: var(--color-yellow);
+  font-size: 30px;
+  transform: rotate(-45deg);
   justify-content: center;
   align-items: center;
+  background: url(./imges/Vector.svg) no-repeat;
+  width: 132px;
+  aspect-ratio: 1;
+  display: flex;
+  margin-block: 15px;
 }
-.sale__text {
-  transform: rotate(-45deg);
+.play-Win__description-sale {
+  max-width: 460px;
+  line-height: 34px;
+}
+.play-Win-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  font-weight: 300;
+  font-family: var(--font-family-main);
+  color: var(--color-white);
+  font-size: 18px;
+}
+.play-Win-form__input {
+  background-color: inherit;
+  border: none;
+  height: 46px;
+}
+.play-Win-form__input::after {
+  content: "";
+  height: 2px;
+  width: 460px;
+  background-color: var(--color-white);
 }
 
 /* /////full-immersion///////// */
