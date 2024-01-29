@@ -88,17 +88,16 @@
               будут подведены 1 февраля. Удачи! ;&#41; </div>
 
             <form class="play-Win-form" action="">
-              <input class="play-Win-form__input" type="text" required placeholder="Как тебя зовут?">
-              <input class="play-Win-form__input" type="email" required placeholder="Твой е-mail">
-              <div class="play-Win-form__input-file">
-                <input id="file" class="play-Win-form__input" type="file" required placeholder="Прикрепить скриншот"
-                  style="visibility:hidden;" accept="image/*">
-                <label for="file">Прикрепить скриншот</label>
+              <input class="play-Win-form__input" placeholder="Как тебя зовут?" type="text" required>
+              <input  class="play-Win-form__input" placeholder="Твой е-mail" type="email" required>
+              <div class="play-Win-form__item user-file">
+                <input id="user-file" class="play-Win-form__item-input" type="file" required accept="image/*">
+                <label for="user-file" class="play-Win-form__item-label">Прикрепить скриншот</label>
               </div>
-              <input class="play-Win-form__input-submit" type="submit">
-              <div class="confirm">
-                <input id="confirm" type="checkbox" required>
-                <label for="confirm">Согласен на обработку персональных данных</label>
+              <input class="play-Win-form__submit" type="submit">
+              <div class="play-Win-form__item confirm">
+                <input class="play-Win-form__item-checkbox" id="confirm" type="checkbox" required>
+                <label class="play-Win-form__item-checkbox-label for="confirm">Согласен на обработку персональных данных</label>
             </form>
           </div>
         </div>
